@@ -1,0 +1,78 @@
+body{
+    background-color: rgb(255, 255, 255);
+    color:rgb(0, 0, 0);
+    font-family: 'Georgia';
+    
+    width: 100%;
+    height: 100%;
+}
+
+/* 
+
+SFU colors used in the  picture::after
+red: #b5131a 
+greyish baby blue: e9eff1
+
+*/
+
+.lowerboundwrapper {
+  /* what we want to do is create different sections using 
+  the width and height and back gound. and then change their position using the left right top and bottom values.
+  the top bottom right and left can be given numbers like 0, and also percentages. 
+  then we give it white boarders to create the white space and then round them off.  
+  */
+  border-style: solid;
+  border-color: white;
+  border-width: 5px;
+  border-radius: 8px;
+  background-color: #e9eff1;
+  left: 0;
+  top: 0;
+  
+  height: 100%;
+  width: 50%;
+  position: fixed;
+  
+}
+.headers{
+  color: #b5131a;
+  font-family: 'Georgia' ;
+  margin-left: 15px;
+
+}
+
+table.lowerboundtable{
+  height: 100%;
+  right: 0;
+}
+
+  
+.histogramwrapper {
+  border-style: solid;
+  border-color: white;
+  border-width: 5px;
+  border-radius: 8px;
+  background-color: #e9eff1;
+  right: 0;
+  top: 0;
+  height: 60%;
+  width: 50%;
+  position: fixed;
+    
+    
+}
+/* search up css grid*/
+  
+.newgradewrapper {
+  
+  border-style: solid;
+  border-color: white;
+  border-width: 5px;
+  border-radius: 8px;
+  background-color: #e9eff1;
+  right: 0;
+  bottom: 0;
+  height: 40%;
+  width: 50%;
+  position: fixed;
+}

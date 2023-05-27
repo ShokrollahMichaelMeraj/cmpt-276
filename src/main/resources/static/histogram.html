@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Histogram Generator</title>
+    <link rel="stylesheet" href="histogram.css">
+    <script src="/JS/script.js" defer></script> 
+    <!-- what defer means, is when you defer is allows the entire page to 
+        run befire runing the script. OR you could put the reagular scruipt right before or after the body -->
+</head>
+<body>
+    <!--simple documentation/ explanation for the following code:
+        we want the code to have a pre made array of number that is 
+        set up and can be changed if needed. then you could enter a 
+        new grade for the a new student or such. and you would get 
+        the O or something like that. 
+
+        LIMITATIONS AND CHECKING:
+        - IF THE THE BOUNDS THAT HAVE BEEN ENTERED ARE THE SAME OR OVERLAPPING.
+        - IF THE NUMBER ENTERED IS NOT IN THE BOUNDS.
+        - IF THE NUMBER ENETERED IS NOT A NUMBER
+        - IF THE NUMBER ENETER -->
+    
+        <div class="lowerboundwrapper" id="leftwrapperid"> 
+            
+            <div class="outterwrapper" id="outer-wrapper-id">
+
+                <h2 class=" headers">Lower bounds</h2>
+                <table name ="lowerboundt" class= "lowerboundtable" id= "lowerbound-table-id">
+                    <th>
+                        <td></td>
+                        <td></td>
+                    </th>
+                    <tr>
+                        <td>Max</td>
+                        <td><input type="text" inputmode="numeric" name="maxlb" id="mlb" max="100.00" min="0"></td>
+                    </tr>
+                    <tr>
+                        <td>A+</td>   
+                        <td><input type="number" name="A+lowerbound" id="A+lb"></input></td>
+                    </tr>
+                    <tr>
+                        <td>A</td>   
+                        <td><input type="number" name="Alowerbound" id="Alb"></input></td>
+                    </tr>
+                    <tr>
+                        <td>A-</td>   
+                        <td><input type="number" name="A=lowerbound" id="A-lb"></input></td>
+                    </tr>
+                    <tr>
+                        <td>B+</td>   
+                        <td><input type="number" name="B+lowerbound" id="B+lb"></input></td>
+                    </tr>
+                    <tr>
+                        <td>B</td>   
+                        <td><input type="number" name="Blowerbound" id="Blb"></input></td>
+                    </tr>
+                    <tr>
+                        <td>B-</td>   
+                        <td><input type="number" name="B-lowerbound" id="B-lb"></input></td>
+                    </tr>
+                    <tr>
+                        <td>C+</td>   
+                        <td><input type="number" name="C+lowerbound" id="C+lb"></input></td>
+                    </tr>
+                    <tr>
+                        <td>C</td>   
+                        <td><input type="number" name="Clowerbound" id="Clb"></input></td>
+                    </tr>
+                    <tr>
+                        <td>C-</td>   
+                        <td><input type="number" name="C-lowerbound" id="C-lb"></input></td>
+                    </tr>
+                    <tr>
+                        <td>D</td>   
+                        <td><input type="number" name="Dlowerbound" id="Dlb"></input></td>
+                    </tr>
+                    <tr>
+                        <td>F</td>   
+                        <td><input type="number" name="Flowerbound" id="Flb"></input></td>
+                    </tr>
+
+
+                </table>
+            </div>
+             <!-- media screen an d adjustment for the screen-->
+        </div>
+    <div class="histogramwrapper" id="toprightwrapperid ">
+        <h2 class=" headers">Histogram</h2>
+    </div>
+    <div class="newgradewrapper" id="lowerrightwrapperid">
+        <input type="text" inputmode="numeric" id="newgrade">
+    </div>
+    <footer>Copyright Shokrollah Michael Meraj 2023</footer>
+</body>
+</html>
