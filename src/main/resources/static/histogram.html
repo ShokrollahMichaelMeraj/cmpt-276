@@ -24,62 +24,62 @@
         - IF THE NUMBER ENETER -->
     
         <div class="lowerboundwrapper" id="leftwrapperid"> 
-            
-            <div class="outterwrapper" id="outer-wrapper-id">
+            <h2 class=" headers">Lower bounds</h2>
+            <div class="innerwrapper" id="inner-wrapper-id">
 
-                <h2 class=" headers">Lower bounds</h2>
-                <table name ="lowerboundt" class= "lowerboundtable" id= "lowerbound-table-id">
+                
+                <table name ="lowerboundtable" class= "lowerboundtable1" id= "lowerbound-table-id">
                     <th>
                         <td></td>
                         <td></td>
                     </th>
                     <tr>
                         <td>Max</td>
-                        <td><input type="text" inputmode="numeric" name="maxlb" id="mlb" max="100.00" min="0"></td>
+                        <td><input type="number" inputmode="numeric" name="maxlb" id="mlb" max="100.00" min="0" value="100.00" size="3"> </td>
                     </tr>
                     <tr>
-                        <td>A+</td>   
-                        <td><input type="number" name="A+lowerbound" id="A+lb"></input></td>
+                        <td>A+</td>  
+                        <td><input type="number" name="A+lowerbound" id="A+lb" max="100.00" min="0" value="95.00" size="3"></input></td>
                     </tr>
                     <tr>
                         <td>A</td>   
-                        <td><input type="number" name="Alowerbound" id="Alb"></input></td>
+                        <td><input type="number" name="Alowerbound" id="Alb" max="100.00" min="0" value="90.00" size="3"></input></td>
                     </tr>
                     <tr>
                         <td>A-</td>   
-                        <td><input type="number" name="A=lowerbound" id="A-lb"></input></td>
+                        <td><input type="number" name="A=lowerbound" id="A-lb" max="100.00" min="0" value="85.00" size="3"></input></td>
                     </tr>
                     <tr>
                         <td>B+</td>   
-                        <td><input type="number" name="B+lowerbound" id="B+lb"></input></td>
+                        <td><input type="number" name="B+lowerbound" id="B+lb" max="100.00" min="0" value="80.00" size="3"></input></td>
                     </tr>
                     <tr>
                         <td>B</td>   
-                        <td><input type="number" name="Blowerbound" id="Blb"></input></td>
+                        <td><input type="number" name="Blowerbound" id="Blb" max="100.00" min="0" value="75.00" size="3"></input></td>
                     </tr>
                     <tr>
                         <td>B-</td>   
-                        <td><input type="number" name="B-lowerbound" id="B-lb"></input></td>
+                        <td><input type="number" name="B-lowerbound" id="B-lb" max="100.00" min="0" value="70.00" size="3"></input></td>
                     </tr>
                     <tr>
                         <td>C+</td>   
-                        <td><input type="number" name="C+lowerbound" id="C+lb"></input></td>
+                        <td><input type="number" name="C+lowerbound" id="C+lb" max="100.00" min="0" value="65.00" size="3"></input></td>
                     </tr>
                     <tr>
                         <td>C</td>   
-                        <td><input type="number" name="Clowerbound" id="Clb"></input></td>
+                        <td><input type="number" name="Clowerbound" id="Clb" max="100.00" min="0" value="60.00" size="3"></input></td>
                     </tr>
                     <tr>
                         <td>C-</td>   
-                        <td><input type="number" name="C-lowerbound" id="C-lb"></input></td>
+                        <td><input type="number" name="C-lowerbound" id="C-lb" max="100.00" min="0" value="55.00" size="3"></input></td>
                     </tr>
                     <tr>
                         <td>D</td>   
-                        <td><input type="number" name="Dlowerbound" id="Dlb"></input></td>
+                        <td><input type="number" name="Dlowerbound" id="Dlb" max="100.00" min="0" value="50.00" size="3"></input></td>
                     </tr>
                     <tr>
                         <td>F</td>   
-                        <td><input type="number" name="Flowerbound" id="Flb"></input></td>
+                        <td><input type="number" name="Flowerbound" id="Flb" max="100.00" min="0" value="0" size="3"></input></td>
                     </tr>
 
 
@@ -89,9 +89,72 @@
         </div>
     <div class="histogramwrapper" id="toprightwrapperid ">
         <h2 class=" headers">Histogram</h2>
+        <div class="innerwrapper" id="hg-inner-wrapper-id">
+
+            <table name ="histogramtable" class= "histogramtable1" id= "histogram-table-id">
+                <th>
+                    <td></td>
+                    <td></td>
+                </th>
+                <tr>
+                    <td>Max</td>
+                    <td> </td>
+                </tr>
+                <tr>
+                    <td>A+</td>  
+                    <td> </td>
+                </tr>
+                <tr>
+                    <td>A</td>   
+                    <td> </td>
+                </tr>
+                <tr>
+                    <td>A-</td>   
+                    <td> </td>
+                </tr>
+                <tr>
+                    <td>B+</td>   
+                    <td> </td>
+                </tr>
+                <tr>
+                    <td>B</td>   
+                    <td> </td>
+                </tr>
+                <tr>
+                    <td>B-</td>   
+                    <td> </td>
+                </tr>
+                <tr>
+                    <td>C+</td>   
+                    <td> </td>
+                </tr>
+                <tr>
+                    <td>C</td>   
+                    <td> </td>
+                </tr>
+                <tr>
+                    <td>C-</td>   
+                    <td> </td>
+                </tr>
+                <tr>
+                    <td>D</td>   
+                    <td> </td>
+                </tr>
+                <tr>
+                    <td>F</td>   
+                    <td> </td>
+                </tr>
+
+            </table>
+        </div>
     </div>
     <div class="newgradewrapper" id="lowerrightwrapperid">
-        <input type="text" inputmode="numeric" id="newgrade">
+        <div class="newgradewrapper" id="lowerrightwrapperid">
+
+            <Label >New Grade: </Label>
+            <!-- new grade check between CURRENT DYNAMIC max and F -->
+            <input name="newgrade" type="number" inputmode="numeric" id="newgradeid" max="100.00" min="0" size="7"> 
+        </div>
     </div>
     <footer>Copyright Shokrollah Michael Meraj 2023</footer>
 </body>

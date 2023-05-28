@@ -75,4 +75,34 @@ table.lowerboundtable{
   height: 40%;
   width: 50%;
   position: fixed;
+  margin-left: 2%;
+  margin-top: 5%;
 }
+
+
+.innerwrapper{
+  padding-left: 5%;
+}
+/*
+table.lowerboundtable1{
+
+} 
+
+table.lowerboundtable1 tr {
+
+}
+table.lowerboundtable1 td {
+
+}
+
+table.histogramtable1 { 
+
+}
+table.histogramtable1 tr {
+
+}
+table.histogramtable1 td {
+
+}
+*/
+
