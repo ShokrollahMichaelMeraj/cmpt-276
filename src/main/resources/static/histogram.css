@@ -93,26 +93,22 @@ table.lowerboundtable{
   padding-left: 2%;
   padding-top: 5%;
 }
-/*
-table.lowerboundtable1{
 
-} 
+
 
 table.lowerboundtable1 tr {
-
+  padding: 5%;
 }
-table.lowerboundtable1 td {
-
+  table.lowerboundtable1 td {
+    padding: 5%;
 }
 
-table.histogramtable1 { 
 
-}
 table.histogramtable1 tr {
-
+  padding: 5%;
 }
 table.histogramtable1 td {
-
+  padding: 5%;
 }
-*/
+
 

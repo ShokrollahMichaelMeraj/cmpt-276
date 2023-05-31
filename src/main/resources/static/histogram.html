@@ -29,14 +29,11 @@
 
             <div class="innerwrapper" id="inner-wrapper-id">
 
-                <table name ="lowerboundtable" class= "lowerboundtable1" id= "lowerbound-table-id">
-                    <th>
-                        <td></td>
-                        <td></td>
-                    </th>
+                <table name ="lowerboundtable" class= "lowerboundtable1" id= "lowerboundtableid">
+                   
                     <tr>
                         <td>Max</td>
-                        <td><input type="number" inputmode="numeric" name="maxlb" id="Mlb" max="100.00" min="0" value="100.00" size="3"> </td>
+                        <td><input type="number" inputmode="numeric" name="maxlb" id="Mlb" max="100.00" min="0" value="100.00" size="3" onblur=""> </td>
                     </tr>
                     <tr>
                         <td>A+</td>  
@@ -83,9 +80,8 @@
                         <td><input type="number" inputmode="numeric" ame="Flowerbound" id="Flb" max="100.00" min="0" value="0" size="3"></input></td>
                     </tr>
 
-
                 </table>
-                <button>Recalculate</button>
+                <button onclick="dynamiclowerbound()"> Recalculate </button>
             </div>
                 <!-- media screen an d adjustment for the screen-->
         </div>
@@ -93,59 +89,56 @@
             <h2 class=" headers">Histogram</h2>
             <div class="innerwrapper" id="hg-inner-wrapper-id">
 
-                <table name ="histogramtable" class= "histogramtable1" id= "histogram-table-id">
-                    <th>
-                        <td></td>
-                        <td></td>
-                    </th>
+                <table name ="histogramtable" class= "histogramtable1" id= "histogramtableid">
+                    
             
                     <tr name="A+students" class="" id="A+studentrow">
                         <td>A+</td>  
-                        <td name="number-for-A-plus-student" class="" id="A+num"> </td>
+                        <td name="number-for-A-plus-student" class="" id="A+num"> 0</td>
                     </tr>
                     <tr name="Astudents" class="" id="Astudentrow">
                         <td>A</td>  
-                        <td name="number-for-A-student" class="" id="Anum"> </td>
+                        <td name="number-for-A-student" class="" id="Anum"> 0</td>
                     </tr>
                     <tr name="A-students" class="" id="A-studentrow">
                         <td>A-</td>  
-                        <td name="number-for-A-minus-student" class="" id="A-num"> </td>
+                        <td name="number-for-A-minus-student" class="" id="A-num"> 0</td>
                     </tr>
                     
                     <tr name="B+students" class="" id="B+studentrow">
                         <td>B+</td>  
-                        <td name="number-for-B-plus-student" class="" id="B+num"> </td>
+                        <td name="number-for-B-plus-student" class="" id="B+num"> 0</td>
                     </tr>
                     <tr name="Bstudents" class="" id="Bstudentrow">
                         <td>B</td>  
-                        <td name="number-for-B-student" class="" id="Bnum"> </td>
+                        <td name="number-for-B-student" class="" id="Bnum"> 0</td>
                     </tr>
                     <tr name="B-students" class="" id="B-studentrow">
                         <td>B-</td>  
-                        <td name="number-for-B-minus-student" class="" id="B-num"> </td>
+                        <td name="number-for-B-minus-student" class="" id="B-num"> 0</td>
                     </tr>
 
                     <tr name="C+students" class="" id="C+studentrow">
                         <td>C+</td>  
-                        <td name="number-for-C-plus-student" class="" id="C+num"> </td>
+                        <td name="number-for-C-plus-student" class="" id="C+num"> 0</td>
                     </tr>
                     <tr name="Cstudents" class="" id="Cstudentrow">
                         <td>C</td>  
-                        <td name="number-for-C-student" class="" id="Cnum"> </td>
+                        <td name="number-for-C-student" class="" id="Cnum"> 0</td>
                     </tr>
                     <tr name="C-students" class="" id="C-studentrow">
                         <td>C-</td>  
-                        <td name="number-for-A-minus-student" class="" id="C-num"> </td>
+                        <td name="number-for-A-minus-student" class="" id="C-num" >0</td>
                     </tr>
 
                     <tr name="Dstudents" class="" id="Dstudentrow">
                         <td>D</td>  
-                        <td name="number-for-C-student" class="" id="Dnum"> </td>
+                        <td name="number-for-C-student" class="" id="Dnum"> 0</td>
                     </tr>
 
                     <tr name="Fstudents" class="" id="Fstudentrow">
                         <td>F</td>  
-                        <td name="number-for-F-student" class="" id="Fnum"> </td>
+                        <td name="number-for-F-student" class="" id="Fnum" > 0</td>
                     </tr>
 
                 </table>

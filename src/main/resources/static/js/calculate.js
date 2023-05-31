@@ -33,79 +33,7 @@
 // function update(params) {
     
 // }
-let dynamicdata= 
-[
-    {
-        "lettergrade": "A+",
-        "percentage": 95,
-        "studentsinthisrange": 0,
-    },
-    {
-        "lettergrade": "A",
-        "percentage": 90,
-        "studentsinthisrange": 0,
-    },
-    {
-        "lettergrade": "A-",
-        "percentage": 85,
-        "studentsinthisrange": 0,
-    },
-    {
-        "lettergrade": "B+",
-        "percentage": 80,
-        "studentsinthisrange": 0,
-    },
-    {
-        "lettergrade": "B",
-        "percentage": 75,
-        "studentsinthisrange": 0,
-    },
-    {
-        "lettergrade": "B-",
-        "percentage": 70,
-        "studentsinthisrange": 0,
-    },
-    {
-        "lettergrade": "B+",
-        "percentage": 80,
-        "studentsinthisrange": 0,
-    },
-    {
-        "lettergrade": "B",
-        "percentage": 75,
-        "studentsinthisrange": 0,
-    },
-    {
-        "lettergrade": "B-",
-        "percentage": 70,
-        "studentsinthisrange": 0,
-    },
-    {
-        "lettergrade": "C+",
-        "percentage": 65,
-        "studentsinthisrange": 0,
-    },
-    {
-        "lettergrade": "C",
-        "percentage": 60,
-        "studentsinthisrange": 0,
-    },
-    {
-        "lettergrade": "C-",
-        "percentage": 55,
-        "studentsinthisrange": 0,
-    },{
-        "lettergrade": "D",
-        "percentage": 50,
-        "studentsinthisrange": 0,
-    },
-    {
-        "lettergrade": "F",
-        "percentage": 0,
-        "studentsinthisrange": 0,
-    }
-    
-]
+
 
 var grades = []; //array with the student grades
 
@@ -151,63 +79,166 @@ function addNewgrade() {
     //check to see if it is a number and is it between the range that we want.
     if ( isNumber(tempnewgrade) && inrange(tempnewgrade)){
         grades.push(tempnewgrade); //push the new grade to the array.
-        var templbtable = document.getElementById("lowerbound-table-id");
+        var templbtable = document.getElementById("lowerboundtableid");
         // loop through each row of the lowerbounds table
         // go the the cell which contains the percentage lowerbound. 
         // check if the newgrade is bigger than the value /percentage inside that cell. remember the index of the row.
         // Run a function that goes to the same letter grade where that new grade was inputed.
-        for (let index = 0; index < array.length; index++) {
-            const element = array[index];
+        for (var index= 0; index < templbtable.rows.length; index++) {
+
+            
+            var row = templbtable.rows[index];
+            var secondCellvalue = parseFloat(row.cells[1].childNodes[0].value); 
+        
+            if(tempnewgrade >= secondCellvalue){
+                
+                //run a function that would go to the histogram table and add one to the number of studnts in that range.
+                console.log(index);
+                histogramupdate(index-1);
+                break;
+
+            } 
             
         }
 
-
-
-
-
     }else{
-        alert ("Invalid Input.")
+        //alert ("Invalid Input.")
        return 0;
     }
     
+}
+
+function recalcNewgrades(value) {
+    //get the value of the new inputed grade and check to see if it a number
+    var tempgrade = parseFloat (value).toFixed(2);
+    //check to see if it is a number and is it between the range that we want.
+    if ( isNumber(tempgrade) && inrange(tempgrade)){
+        //push the new grade to the array.
+        var templbtable = document.getElementById("lowerboundtableid");
+        // loop through each row of the lowerbounds table
+        // go the the cell which contains the percentage lowerbound. 
+        // check if the newgrade is bigger than the value /percentage inside that cell. remember the index of the row.
+        // Run a function that goes to the same letter grade where that new grade was inputed.
+        for (var index= 0; index < templbtable.rows.length; index++) {
+
+            
+            var row = templbtable.rows[index];
+            var secondCellvalue = parseFloat(row.cells[1].childNodes[0].value); 
+        
+            if(tempgrade >= secondCellvalue){
+                
+                //run a function that would go to the histogram table and add one to the number of studnts in that range.
+                console.log(index);
+                histogramupdate(index-1);
+                break;
+
+            } 
+            
+        }
+
+    }else{
+        //alert ("Invalid Input.")
+       return 0;
+    }
     
-    window.alert(tempnewgrade);
+}
 
-    //if (tempnewgrade)
+function histogramupdate(index) {
+    var temphistogramtable = document.getElementById("histogramtableid");
+    // console.log(temphistogramtable);
+    // console.log(temphistogramtable.rows);
+    var temprow = temphistogramtable.rows[index];
+    // console.log(temprow);
+    
+    var tempcell= parseInt(temprow.cells[1].innerHTML);
+    temprow.cells[1].innerHTML = tempcell +=1;
+}
 
-        // if yes, than accept,
-        // if not, give alert
-    // get the id of the lowerbound table
-    // checks if the new grade is bigger than MAX or smaller than F
-    // if not then we proceed, BUT if yes, give alert
-    // put the new grade into an array. 
-    // go through the lowerbound table, and see where it belongs,
-    // go through the histogram table and add one to the range of the letter grade that it belongs to
+function histogramreset() {
+    var temphistogramtable = document.getElementById("histogramtableid");
+    // console.log(temphistogramtable);
+    // console.log(temphistogramtable.rows);
+    for (var index = 0; index < temphistogramtable.rows.length; index++) {
+        var temprow = temphistogramtable.rows[index];
+        // console.log(temprow);
+        var tempcell= parseInt(temprow.cells[1].innerHTML);
+        temprow.cells[1].innerHTML = 0;
+    }
+
 }
 
 
+function dynamiclowerbound() {
+    var temptable = document.getElementById("lowerboundtableid");
 
-// function changelowerbound() {
-//     //first of all check to see if it is a number,
-//         // if yes, than accept,
-//         // if not, give alert
-//     // if the max of F kletter grade is being changed, we have to check 
-//         //if MAX is smaller than or equal to 100 and bigger than the lettergrade bellow 
-//         // if F is being chnaged, we have to check if it is bigger or equal to 0 and smaller than the letter grade above.
-//     // check to see if the lowerbound enetered (not F/ max) is smaller than the above lettergrade and bigger than the bellow letter grade 
-//     // if not, give alert
-//     // if yes, accept and go loop through the histogram table, if 
+    for (var index= 0; index < temptable.rows.length; index++) {
+        console.log(index);
+        if (index === 0) {
+            
+            var row = temptable.rows[index];
+            var temppercentage = parseFloat(row.cells[1].childNodes[0].value); 
+            var rowbellow= temptable.rows[index+1];
+            var percentagebellow = parseFloat(rowbellow.cells[1].childNodes[0].value); 
+            if( (temppercentage <= 100) && (percentagebellow < temppercentage) ){
+                
 
+            } 
+            else{
+            alert("Invalid or overlapping lowerbound change detected!");
+            break;
+            }
     
-// }
+         
+            
+        }
+        else if(index === 11) {
+
+            var row = temptable.rows[index];
+            var temppercentage = parseFloat(row.cells[1].childNodes[0].value); 
+            var rowabove = temptable.rows[index-1];
+            var percentageabove = parseFloat(rowabove.cells[1].childNodes[0].value); 
+            if( temppercentage < percentageabove && 0 <= temppercentage ){
+        
+
+            } 
+            else{
+            alert("Invalid or overlapping lowerbound change detected!");
+            break;
+            }
+        }
+        else{
+            var temprow = temptable.rows[index];
+            console.log(temppercentage);
+            var temppercentage = parseFloat(temprow.cells[1].childNodes[0].value); 
+            //isNumber(temppercentage);
+            var rowbellow= temptable.rows[index+1];
+            var percentagebellow = parseFloat(rowbellow.cells[1].childNodes[0].value);  
+            var rowabove = temptable.rows[index-1];
+            var percentageabove = parseFloat(rowabove.cells[1].childNodes[0].value); 
+            if( (temppercentage > percentagebellow) && ( temppercentage < percentageabove) ){
 
 
-// function name() {
+            } 
+            else{
+            alert("Invalid or overlapping lowerbound change detected!");
+          
+            }
+        }
+
+        
+    }
+    //clear the histogram
+    histogramreset();
+    //we get a  grade array and loop through them.
+    for (var i = 0; i < grades.length; i++) {
+        //we loop through the table
+        //we change the histogram
+        recalcNewgrades(grades[i]);
+        
+    }
+    //we loop through the table
+    //we change the histogram
     
-// }
 
-
-// function name() {
-    
-// }
+}
 
