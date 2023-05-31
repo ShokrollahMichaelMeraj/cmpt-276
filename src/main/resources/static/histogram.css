@@ -3,8 +3,8 @@ body{
     color:rgb(0, 0, 0);
     font-family: 'Georgia';
     
-    width: 100%;
-    height: 100%;
+    width: auto;
+    height: auto;
 }
 
 /* 
@@ -15,6 +15,12 @@ greyish baby blue: e9eff1
 
 */
 
+@media (max-height: 300) {
+  .body {
+      width: 50%;
+
+  }
+}
 .lowerboundwrapper {
   /* what we want to do is create different sections using 
   the width and height and back gound. and then change their position using the left right top and bottom values.
@@ -28,7 +34,6 @@ greyish baby blue: e9eff1
   background-color: #e9eff1;
   left: 0;
   top: 0;
-  
   height: 100%;
   width: 50%;
   position: fixed;

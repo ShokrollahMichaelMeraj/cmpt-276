@@ -33,41 +33,148 @@
 // function update(params) {
     
 // }
-// let grades = 
-// [
-//     {
-//         "lettergrade": "A+",
-//         "percentage": document.getElementById() ,
-        
-//         "studentsinthisrange": 0,
-//     },
-//     {
-//         "lettergrade": "A",
-//         "percentage": 90,
-//         "studentsinthisrange": 0,
-//     },
-//     {
-//         "lettergrade": "A-",
-//         "percentage": 85,
-//         "studentsinthisrange": 0,
-//     },
-//     {
-//         "lettergrade": "A+",
-//         "percentage": 95,
-//         "studentsinthisrange": 0,
-//     },
+let dynamicdata= 
+[
+    {
+        "lettergrade": "A+",
+        "percentage": 95,
+        "studentsinthisrange": 0,
+    },
+    {
+        "lettergrade": "A",
+        "percentage": 90,
+        "studentsinthisrange": 0,
+    },
+    {
+        "lettergrade": "A-",
+        "percentage": 85,
+        "studentsinthisrange": 0,
+    },
+    {
+        "lettergrade": "B+",
+        "percentage": 80,
+        "studentsinthisrange": 0,
+    },
+    {
+        "lettergrade": "B",
+        "percentage": 75,
+        "studentsinthisrange": 0,
+    },
+    {
+        "lettergrade": "B-",
+        "percentage": 70,
+        "studentsinthisrange": 0,
+    },
+    {
+        "lettergrade": "B+",
+        "percentage": 80,
+        "studentsinthisrange": 0,
+    },
+    {
+        "lettergrade": "B",
+        "percentage": 75,
+        "studentsinthisrange": 0,
+    },
+    {
+        "lettergrade": "B-",
+        "percentage": 70,
+        "studentsinthisrange": 0,
+    },
+    {
+        "lettergrade": "C+",
+        "percentage": 65,
+        "studentsinthisrange": 0,
+    },
+    {
+        "lettergrade": "C",
+        "percentage": 60,
+        "studentsinthisrange": 0,
+    },
+    {
+        "lettergrade": "C-",
+        "percentage": 55,
+        "studentsinthisrange": 0,
+    },{
+        "lettergrade": "D",
+        "percentage": 50,
+        "studentsinthisrange": 0,
+    },
+    {
+        "lettergrade": "F",
+        "percentage": 0,
+        "studentsinthisrange": 0,
+    }
+    
+]
+
+var grades = []; //array with the student grades
+
+
+
+
+function isNumber(value) { // should be the .value of the input, not the element by id. 
+    const tempvar = parseFloat(value);// creates a temporary value and allows us to only get numbers.
+  
+    // if not a number, only return an alrt asking for number input. and return 0
+    if (isNaN(tempvar)) { 
+      alert('Please enter a number.'); 
+      return 0;
+    } else { // return 1 if input is number
+      return 1;
+    }
+}
+
+function inrange(inputvalue) {
+    var tempmax = parseFloat(document.getElementById("Mlb").value);
+    var tempf = parseFloat(document.getElementById("Flb").value);
+    if ( inputvalue >= tempf && inputvalue <= tempmax ){
+        return 1;
+    }else{
+        alert ("Please give a number between " + tempf + " and " + tempmax + ".");
+        return 0;
+    }
+
+}
+
+
+function handleEnter(event) {
+    if (event.key === 'Enter') {
+        addNewgrade();
+    }
+}
+
+function addNewgrade() {
+    //get the value of the new inputed grade and check to see if it a number
+    var tempholder = document.getElementById("newgradeid").value;
+    var tempnewgrade = parseFloat (tempholder).toFixed(2);
+    
+    //check to see if it is a number and is it between the range that we want.
+    if ( isNumber(tempnewgrade) && inrange(tempnewgrade)){
+        grades.push(tempnewgrade); //push the new grade to the array.
+        var templbtable = document.getElementById("lowerbound-table-id");
+        // loop through each row of the lowerbounds table
+        // go the the cell which contains the percentage lowerbound. 
+        // check if the newgrade is bigger than the value /percentage inside that cell. remember the index of the row.
+        // Run a function that goes to the same letter grade where that new grade was inputed.
+        for (let index = 0; index < array.length; index++) {
+            const element = array[index];
+            
+        }
+
+
+
+
+
+    }else{
+        alert ("Invalid Input.")
+       return 0;
+    }
     
     
-// ]
+    window.alert(tempnewgrade);
 
+    //if (tempnewgrade)
 
-
-
-
-
-function newgrade() {
-    //first of all check to see if it is a number,
-    var tempnewgrade = parseFloat(document.getelementbyid("newgradeid")
         // if yes, than accept,
         // if not, give alert
     // get the id of the lowerbound table
@@ -77,6 +184,7 @@ function newgrade() {
     // go through the lowerbound table, and see where it belongs,
     // go through the histogram table and add one to the range of the letter grade that it belongs to
 }
+
 
 
 // function changelowerbound() {

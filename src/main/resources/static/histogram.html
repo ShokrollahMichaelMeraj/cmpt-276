@@ -10,154 +10,157 @@
     <!-- what defer means, is when you defer is allows the entire page to 
         run befire runing the script. OR you could put the reagular scruipt right before or after the body -->
 </head>
-
 <body>
-    <!--simple documentation/ explanation for the following code:
-        we want the code to have a pre made array of number that is 
-        set up and can be changed if needed. then you could enter a 
-        new grade for the a new student or such. and you would get 
-        the O or something like that. 
+    <div class="outterdiv">
+        <!--simple documentation/ explanation for the following code:
+            we want the code to have a pre made array of number that is 
+            set up and can be changed if needed. then you could enter a 
+            new grade for the a new student or such. and you would get 
+            the O or something like that. 
 
-        LIMITATIONS AND CHECKING:
-        - IF THE THE BOUNDS THAT HAVE BEEN ENTERED ARE THE SAME OR OVERLAPPING.
-        - IF THE NUMBER ENTERED IS NOT IN THE BOUNDS.
-        - IF THE NUMBER ENETERED IS NOT A NUMBER
-        - IF THE NUMBER ENETER -->
-    
-    <div class="lowerboundwrapper" id="leftwrapperid"> 
-        <h2 class=" headers">Lower bounds</h2>
-
-        <div class="innerwrapper" id="inner-wrapper-id">
-
-            <table name ="lowerboundtable" class= "lowerboundtable1" id= "lowerbound-table-id">
-                <th>
-                    <td></td>
-                    <td></td>
-                </th>
-                <tr>
-                    <td>Max</td>
-                    <td><input type="number" inputmode="numeric" name="maxlb" id="mlb" max="100.00" min="0" value="100.00" size="3"> </td>
-                </tr>
-                <tr>
-                    <td>A+</td>  
-                    <td><input type="number" inputmode="numeric" name="A+lowerbound" id="A+lb" max="100.00" min="0" value="95.00" size="3"></input></td>
-                </tr>
-                <tr>
-                    <td>A</td>   
-                    <td><input type="number" inputmode="numeric" name="Alowerbound" id="Alb" max="100.00" min="0" value="90.00" size="3"></input></td>
-                </tr>
-                <tr>
-                    <td>A-</td>   
-                    <td><input type="number" inputmode="numeric" name="A=lowerbound" id="A-lb" max="100.00" min="0" value="85.00" size="3"></input></td>
-                </tr>
-                <tr>
-                    <td>B+</td>   
-                    <td><input type="number" inputmode="numeric" name="B+lowerbound" id="B+lb" max="100.00" min="0" value="80.00" size="3"></input></td>
-                </tr>
-                <tr>
-                    <td>B</td>   
-                    <td><input type="number" inputmode="numeric" name="Blowerbound" id="Blb" max="100.00" min="0" value="75.00" size="3"></input></td>
-                </tr>
-                <tr>
-                    <td>B-</td>   
-                    <td><input type="number" inputmode="numeric" name="B-lowerbound" id="B-lb" max="100.00" min="0" value="70.00" size="3"></input></td>
-                </tr>
-                <tr>
-                    <td>C+</td>   
-                    <td><input type="number" inputmode="numeric" name="C+lowerbound" id="C+lb" max="100.00" min="0" value="65.00" size="3"></input></td>
-                </tr>
-                <tr>
-                    <td>C</td>   
-                    <td><input type="number" inputmode="numeric" name="Clowerbound" id="Clb" max="100.00" min="0" value="60.00" size="3"></input></td>
-                </tr>
-                <tr>
-                    <td>C-</td>   
-                    <td><input type="number" inputmode="numeric" name="C-lowerbound" id="C-lb" max="100.00" min="0" value="55.00" size="3"></input></td>
-                </tr>
-                <tr>
-                    <td>D</td>  
-                    <td><input type="number" inputmode="numeric" name="Dlowerbound" id="Dlb" max="100.00" min="0" value="50.00" size="3"></input></td>
-                </tr>
-                <tr>
-                    <td>F</td>   
-                    <td><input type="number" inputmode="numeric" ame="Flowerbound" id="Flb" max="100.00" min="0" value="0" size="3"></input></td>
-                </tr>
-
-
-            </table>
-        </div>
-            <!-- media screen an d adjustment for the screen-->
-    </div>
-    <div class="histogramwrapper" id="toprightwrapperid ">
-        <h2 class=" headers">Histogram</h2>
-        <div class="innerwrapper" id="hg-inner-wrapper-id">
-
-            <table name ="histogramtable" class= "histogramtable1" id= "histogram-table-id">
-                <th>
-                    <td></td>
-                    <td></td>
-                </th>
+            LIMITATIONS AND CHECKING:
+            - IF THE THE BOUNDS THAT HAVE BEEN ENTERED ARE THE SAME OR OVERLAPPING.
+            - IF THE NUMBER ENTERED IS NOT IN THE BOUNDS.
+            - IF THE NUMBER ENETERED IS NOT A NUMBER
+            - IF THE NUMBER ENETER -->
         
-                <tr name="A+students" class="" id="A+studentrow">
-                    <td>A+</td>  
-                    <td name="number-for-A-plus-student" class="" id="A+num"> </td>
-                </tr>
-                <tr name="Astudents" class="" id="Astudentrow">
-                    <td>A</td>  
-                    <td name="number-for-A-student" class="" id="Anum"> </td>
-                </tr>
-                <tr name="A-students" class="" id="A-studentrow">
-                    <td>A-</td>  
-                    <td name="number-for-A-minus-student" class="" id="A-num"> </td>
-                </tr>
-                
-                <tr name="B+students" class="" id="B+studentrow">
-                    <td>B+</td>  
-                    <td name="number-for-B-plus-student" class="" id="B+num"> </td>
-                </tr>
-                <tr name="Bstudents" class="" id="Bstudentrow">
-                    <td>B</td>  
-                    <td name="number-for-B-student" class="" id="Bnum"> </td>
-                </tr>
-                <tr name="B-students" class="" id="B-studentrow">
-                    <td>B-</td>  
-                    <td name="number-for-B-minus-student" class="" id="B-num"> </td>
-                </tr>
+        <div class="lowerboundwrapper" id="leftwrapperid"> 
+            <h2 class=" headers">Lower bounds</h2>
 
-                <tr name="C+students" class="" id="C+studentrow">
-                    <td>C+</td>  
-                    <td name="number-for-C-plus-student" class="" id="C+num"> </td>
-                </tr>
-                <tr name="Cstudents" class="" id="Cstudentrow">
-                    <td>C</td>  
-                    <td name="number-for-C-student" class="" id="Cnum"> </td>
-                </tr>
-                <tr name="C-students" class="" id="C-studentrow">
-                    <td>C-</td>  
-                    <td name="number-for-A-minus-student" class="" id="C-num"> </td>
-                </tr>
+            <div class="innerwrapper" id="inner-wrapper-id">
 
-                <tr name="Dstudents" class="" id="Dstudentrow">
-                    <td>D</td>  
-                    <td name="number-for-C-student" class="" id="Dnum"> </td>
-                </tr>
+                <table name ="lowerboundtable" class= "lowerboundtable1" id= "lowerbound-table-id">
+                    <th>
+                        <td></td>
+                        <td></td>
+                    </th>
+                    <tr>
+                        <td>Max</td>
+                        <td><input type="number" inputmode="numeric" name="maxlb" id="Mlb" max="100.00" min="0" value="100.00" size="3"> </td>
+                    </tr>
+                    <tr>
+                        <td>A+</td>  
+                        <td><input type="number" inputmode="numeric" name="A+lowerbound" id="A+lb" max="100.00" min="0" value="95.00" size="3"></input></td>
+                    </tr>
+                    <tr>
+                        <td>A</td>   
+                        <td><input type="number" inputmode="numeric" name="Alowerbound" id="Alb" max="100.00" min="0" value="90.00" size="3"></input></td>
+                    </tr>
+                    <tr>
+                        <td>A-</td>   
+                        <td><input type="number" inputmode="numeric" name="A=lowerbound" id="A-lb" max="100.00" min="0" value="85.00" size="3"></input></td>
+                    </tr>
+                    <tr>
+                        <td>B+</td>   
+                        <td><input type="number" inputmode="numeric" name="B+lowerbound" id="B+lb" max="100.00" min="0" value="80.00" size="3"></input></td>
+                    </tr>
+                    <tr>
+                        <td>B</td>   
+                        <td><input type="number" inputmode="numeric" name="Blowerbound" id="Blb" max="100.00" min="0" value="75.00" size="3"></input></td>
+                    </tr>
+                    <tr>
+                        <td>B-</td>   
+                        <td><input type="number" inputmode="numeric" name="B-lowerbound" id="B-lb" max="100.00" min="0" value="70.00" size="3"></input></td>
+                    </tr>
+                    <tr>
+                        <td>C+</td>   
+                        <td><input type="number" inputmode="numeric" name="C+lowerbound" id="C+lb" max="100.00" min="0" value="65.00" size="3"></input></td>
+                    </tr>
+                    <tr>
+                        <td>C</td>   
+                        <td><input type="number" inputmode="numeric" name="Clowerbound" id="Clb" max="100.00" min="0" value="60.00" size="3"></input></td>
+                    </tr>
+                    <tr>
+                        <td>C-</td>   
+                        <td><input type="number" inputmode="numeric" name="C-lowerbound" id="C-lb" max="100.00" min="0" value="55.00" size="3"></input></td>
+                    </tr>
+                    <tr>
+                        <td>D</td>  
+                        <td><input type="number" inputmode="numeric" name="Dlowerbound" id="Dlb" max="100.00" min="0" value="50.00" size="3"></input></td>
+                    </tr>
+                    <tr>
+                        <td>F</td>   
+                        <td><input type="number" inputmode="numeric" ame="Flowerbound" id="Flb" max="100.00" min="0" value="0" size="3"></input></td>
+                    </tr>
 
-                <tr name="Fstudents" class="" id="Fstudentrow">
-                    <td>F</td>  
-                    <td name="number-for-F-student" class="" id="Fnum"> </td>
-                </tr>
 
-            </table>
+                </table>
+                <button>Recalculate</button>
+            </div>
+                <!-- media screen an d adjustment for the screen-->
         </div>
-    </div>
-    <div class="newgradewrapper" id="lowerrightwrapperid">
-        <div class="newgradeinnerwrapper" id="lowerrightinnerwrapperid">
+        <div class="histogramwrapper" id="toprightwrapperid ">
+            <h2 class=" headers">Histogram</h2>
+            <div class="innerwrapper" id="hg-inner-wrapper-id">
 
-            <Label >New Grade: </Label>
-            <!-- new grade check between CURRENT DYNAMIC max and F -->
-            <input name="newgrade" type="number" inputmode="numeric" id="newgradeid" max="100.00" min="0" size="7"> 
+                <table name ="histogramtable" class= "histogramtable1" id= "histogram-table-id">
+                    <th>
+                        <td></td>
+                        <td></td>
+                    </th>
+            
+                    <tr name="A+students" class="" id="A+studentrow">
+                        <td>A+</td>  
+                        <td name="number-for-A-plus-student" class="" id="A+num"> </td>
+                    </tr>
+                    <tr name="Astudents" class="" id="Astudentrow">
+                        <td>A</td>  
+                        <td name="number-for-A-student" class="" id="Anum"> </td>
+                    </tr>
+                    <tr name="A-students" class="" id="A-studentrow">
+                        <td>A-</td>  
+                        <td name="number-for-A-minus-student" class="" id="A-num"> </td>
+                    </tr>
+                    
+                    <tr name="B+students" class="" id="B+studentrow">
+                        <td>B+</td>  
+                        <td name="number-for-B-plus-student" class="" id="B+num"> </td>
+                    </tr>
+                    <tr name="Bstudents" class="" id="Bstudentrow">
+                        <td>B</td>  
+                        <td name="number-for-B-student" class="" id="Bnum"> </td>
+                    </tr>
+                    <tr name="B-students" class="" id="B-studentrow">
+                        <td>B-</td>  
+                        <td name="number-for-B-minus-student" class="" id="B-num"> </td>
+                    </tr>
+
+                    <tr name="C+students" class="" id="C+studentrow">
+                        <td>C+</td>  
+                        <td name="number-for-C-plus-student" class="" id="C+num"> </td>
+                    </tr>
+                    <tr name="Cstudents" class="" id="Cstudentrow">
+                        <td>C</td>  
+                        <td name="number-for-C-student" class="" id="Cnum"> </td>
+                    </tr>
+                    <tr name="C-students" class="" id="C-studentrow">
+                        <td>C-</td>  
+                        <td name="number-for-A-minus-student" class="" id="C-num"> </td>
+                    </tr>
+
+                    <tr name="Dstudents" class="" id="Dstudentrow">
+                        <td>D</td>  
+                        <td name="number-for-C-student" class="" id="Dnum"> </td>
+                    </tr>
+
+                    <tr name="Fstudents" class="" id="Fstudentrow">
+                        <td>F</td>  
+                        <td name="number-for-F-student" class="" id="Fnum"> </td>
+                    </tr>
+
+                </table>
+            </div>
         </div>
+        <div class="newgradewrapper" id="lowerrightwrapperid">
+            <div class="newgradeinnerwrapper" id="lowerrightinnerwrapperid">
+
+                <Label >New Grade: </Label>
+                <!-- new grade check between CURRENT DYNAMIC max and F -->
+                <input name="newgrade" type="number" inputmode="numeric" id="newgradeid" onkeydown=  "handleEnter(event)" max="100.00" min="0" size="7"> 
+            </div>
+        </div>
+        <footer>Copyright Shokrollah Michael Meraj 2023</footer>
+
     </div>
-    <footer>Copyright Shokrollah Michael Meraj 2023</footer>
 </body>
 </html>
